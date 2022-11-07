@@ -1,0 +1,36 @@
+{
+  "name": "cvnum",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2",
+    "particle.js": "^1.0.7",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VincentGarreau/particles.js.git"
+  },
+  "keywords": [
+    "particles",
+    "particle",
+    "canvas"
+  ],
+  "files": [
+    "particles.js",
+    "particles.min.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/VincentGarreau/particles.js/issues"
+  },
+  "homepage": "https://github.com/VincentGarreau/particles.js"
+}

@@ -1,0 +1,16 @@
+.card {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  width: 30%;
+  margin-left: 35%;
+  color: black;
+  background-color: aliceblue;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#particles-js {
+  background: black;
+  height: 100vh;
+}/*# sourceMappingURL=main.css.map */
