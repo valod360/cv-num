@@ -1,13 +1,40 @@
 .card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 50%;
   position: absolute;
   text-align: center;
-  top: 30%;
+  top: 10%;
   width: 30%;
+  height: 60%;
   margin-left: 35%;
   color: black;
-  background-color: aliceblue;
+  background-color: rgb(68, 68, 68);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+.card > img {
+  justify-self: center;
+  width: 50%;
+  border-radius: 200px;
+  grid-row-start: 2;
+}
+.card > aside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 5% 5% 0 5%;
+  gap: 10px;
+}
+.card > aside > button {
+  height: 5em;
+  border-radius: 15px;
+}
+.card > aside > button:active {
+  box-shadow: inset -2px -2px 3px, inset 2px 2px 3px;
+}
+.card > aside > button:hover {
+  background-color: aliceblue;
+  cursor: pointer;
 }
 
 #particles-js {
