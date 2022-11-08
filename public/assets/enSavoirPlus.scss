@@ -1,0 +1,27 @@
+//pour la page en elle meme
+#container{
+    z-index: 5;
+    background-color: rgb(52, 58, 64);
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    >header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+//pour les particules
+#particles-js{
+    z-index: 1;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.particles-js-canvas-el{
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+}
