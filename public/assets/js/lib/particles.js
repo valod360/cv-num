@@ -11,6 +11,7 @@ var pJS = function(tag_id, params){
       h: canvas_el.offsetHeight
     },
     particles: {
+      fps_limit: 30,
       number: {
         value: 400,
         density: {
