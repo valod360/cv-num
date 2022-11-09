@@ -1,27 +1,210 @@
+// variable pour les skills
+$MainBg: rgb(52, 58, 64);
+$TextBg: rgb(173, 181, 189);
+$circleFadeBg: rgb(39, 43, 48);
+
 //pour la page en elle meme
-#container{
+#container {
     z-index: 5;
-    background-color: rgb(52, 58, 64);
+    background-color: $MainBg;
     grid-column: 2 / 3;
     grid-row: 1 / 4;
-    >header{
+    color: $TextBg;
+
+    >header {
+        margin-top: 1%;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+
+        >#pdp {
+            margin-left: 2%;
+        }
+
+        >#info {
+            margin-left: 2%;
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
 
+#skills {
+    margin-top: 5%;
+
+    >nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .circle {
+        background: $circleFadeBg;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-top: 3em;
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    p {
+        font-size: 3em;
+    }
+
+    >#first {
+        display: flex;
+        justify-content: space-around;
+
+        >#circle1,
+        #circle2,
+        #circle3,
+        #circle4 {
+            background: black;
+        }
+    }
+
+    >#second {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+
+        >#circle2,
+        #circle3,
+        #circle4,
+        #circle5 {
+            background: black;
+        }
+    }
+
+    >#third {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+
+        >#circle1,
+        #circle2,
+        #circle3 {
+            background: black;
+        }
+    }
+
+    >#fourth {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+
+        >#circle3,
+        #circle4,
+        #circle5 {
+            background: black;
+        }
+    }
+
+    >#five {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+
+        >#circle1,
+        #circle2,
+        #circle3 {
+            background: black;
+        }
+    }
+
+    >#six {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+
+        >#circle4,
+        #circle5 {
+            background: black;
+        }
+    }
+
+    >#seven {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+
+        >#circle1,
+        #circle2 {
+            background: black;
+        }
+    }
+
+    >#eight {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+
+        >#circle5,
+        #circle4,
+        #circle3,
+        #circle2 {
+            background: black;
+        }
+    }
+
+    >#nine {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+
+        >#circle1,
+        #circle2,
+        #circle3,
+        #circle4 {
+            background: black;
+        }
+    }
+
+    >#ten{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+
+        >#circle5,
+        #circle4,
+        #circle3 {
+            background: black;
+        }
+    }
+    >#eleven{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20vh;
+
+        >#circle5,
+        #circle4,
+        #circle3 {
+            background: black;
+        }
+    }
+
+    >h2,
+    h3 {
+        text-align: center;
+    }
+
+
+
+}
+
+
+
 
 //pour les particules
-#particles-js{
+#particles-js {
     z-index: 1;
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 20% 1fr 20%;
     grid-template-rows: 1fr 1fr 1fr;
 }
-.particles-js-canvas-el{
+
+.particles-js-canvas-el {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
 }

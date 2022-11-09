@@ -1,4 +1,3 @@
-
 // Express c'est un framework qui te permet de monter des serveur web avec node plus facilement (qusiment tout le temps utilisé d'ailleur)
 const { response } = require('express');
 const express = require('express');
@@ -8,6 +7,7 @@ const path = require('path');
 const app = express();
 // On va dire a ton serveur de chopper les assets statiques pour les rendre quand on les demandes
 app.use(express.static('public'))
+
 // Un objet qui va te permettre de créer des routes pour ton application web.
 const router = express.Router();
 
@@ -22,3 +22,4 @@ app.use('/', router);
 app.listen(8080, () => {
   console.log('Serveur lancé sur le port 8080...');
 });
+
