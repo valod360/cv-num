@@ -9,9 +9,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "express": "^4.18.2",
     "particle.js": "^1.0.7",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
