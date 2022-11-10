@@ -1,0 +1,447 @@
+// variable pour les skills
+$MainBg: rgb(52, 58, 64);
+$TextBg: rgb(173, 181, 189);
+$circleFadeBg: rgb(39, 43, 48);
+$buttonBg: rgb(73, 80, 87);
+$marginTop: 20vh;
+
+
+//pour la page en elle meme
+#container {
+    z-index: 5;
+    background-color: $MainBg;
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    color: $TextBg;
+
+    >header {
+        margin-top: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >#pdp {
+            margin-left: 2%;
+        }
+
+        >#info {
+            margin-left: 2%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+#skills {
+    margin-top: 5%;
+
+    >nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid black;
+
+        >a>button {
+            text-decoration: none;
+            color: $TextBg;
+            background-color: $buttonBg;
+            cursor: pointer;
+            height: 3em;
+            border-radius: 20px;
+
+            &:active {
+                box-shadow: inset -2px -2px 3px,
+                    inset 2px 2px 3px;
+            }
+
+            &:hover {
+                background-color: rgb(206, 212, 218);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .circle {
+        background: $circleFadeBg;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-top: 3em;
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    p {
+        font-size: 3em;
+    }
+
+    >#first {
+        display: flex;
+        justify-content: space-around;
+
+        >#circle1,
+        #circle2,
+        #circle3,
+        #circle4 {
+            background: black;
+        }
+    }
+
+    >#second {
+        display: flex;
+        justify-content: space-around;
+        margin-top: $marginTop;
+
+        >#circle2,
+        #circle3,
+        #circle4,
+        #circle5 {
+            background: black;
+        }
+    }
+
+    >#third {
+        display: flex;
+        justify-content: space-around;
+        margin-top: $marginTop;
+
+        >#circle1,
+        #circle2,
+        #circle3 {
+            background: black;
+        }
+    }
+
+    >#fourth {
+        display: flex;
+        justify-content: space-around;
+        margin-top: $marginTop;
+
+        >#circle3,
+        #circle4,
+        #circle5 {
+            background: black;
+        }
+    }
+
+    >#five {
+        display: flex;
+        justify-content: space-around;
+        margin-top: $marginTop;
+
+        >#circle1,
+        #circle2,
+        #circle3 {
+            background: black;
+        }
+    }
+
+    >#six {
+        display: flex;
+        justify-content: space-around;
+        margin-top: $marginTop;
+
+        >#circle4,
+        #circle5 {
+            background: black;
+        }
+    }
+
+    >#seven {
+        display: flex;
+        justify-content: space-around;
+        margin-top: $marginTop;
+
+        >#circle1,
+        #circle2 {
+            background: black;
+        }
+    }
+
+    >#eight {
+        display: flex;
+        justify-content: space-around;
+        margin-top: $marginTop;
+
+        >#circle5,
+        #circle4,
+        #circle3,
+        #circle2 {
+            background: black;
+        }
+    }
+
+    >#nine {
+        display: flex;
+        justify-content: space-around;
+        margin-top: $marginTop;
+
+        >#circle1,
+        #circle2,
+        #circle3,
+        #circle4 {
+            background: black;
+        }
+    }
+
+    >#ten {
+        display: flex;
+        justify-content: space-around;
+        margin-top: $marginTop;
+
+        >#circle5,
+        #circle4,
+        #circle3 {
+            background: black;
+        }
+    }
+
+    >#eleven {
+        display: flex;
+        justify-content: space-around;
+        margin-top: $marginTop;
+
+        >#circle1,
+        #circle2,
+        #circle3 {
+            background: black;
+        }
+    }
+
+    >h2,
+    h3 {
+        text-align: center;
+    }
+
+
+
+
+}
+
+
+
+//pour les particules
+#particles-js {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.particles-js-canvas-el {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+}
+
+
+//responsive
+
+@media screen and (max-width: 1200px) {
+    body{
+        overflow-x: auto;
+    }
+    #container{
+        >header{
+        display: block;
+        }
+    }
+    #skills{
+        >nav{
+            display: block;
+        }
+    }
+    #particles-js {
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+}
+
+@media screen and (max-width: 850px) {
+    $marginTop: 0;
+    body{
+        overflow-x: auto;
+    }
+    #pdp{
+        width: 50%;
+    }
+    #skills{
+        >#first {
+            display: flex;
+            justify-content: space-around;
+            >img{
+                margin-top: 3.5em;
+            }
+            >#circle1,
+            #circle2,
+            #circle3,
+            #circle4 {
+                background: black;
+            }
+        }
+    
+        >#second {
+            display: flex;
+            justify-content: space-around;
+            margin-top: $marginTop;
+            >img{
+                margin-top: 3.5em;
+            }
+            >#circle2,
+            #circle3,
+            #circle4,
+            #circle5 {
+                background: black;
+            }
+        }
+    
+        >#third {
+            display: flex;
+            justify-content: space-around;
+            margin-top: $marginTop;
+            >img{
+                margin-top: 3.5em;
+            }
+            >#circle1,
+            #circle2,
+            #circle3 {
+                background: black;
+            }
+        }
+    
+        >#fourth {
+            display: flex;
+            justify-content: space-around;
+            margin-top: $marginTop;
+            >img{
+                margin-top: 3.5em;
+            }
+            >#circle3,
+            #circle4,
+            #circle5 {
+                background: black;
+            }
+        }
+    
+        >#five {
+            display: flex;
+            justify-content: space-around;
+            margin-top: $marginTop;
+            >img{
+                margin-top: 3.5em;
+            }
+            >#circle1,
+            #circle2,
+            #circle3 {
+                background: black;
+            }
+        }
+    
+        >#six {
+            display: flex;
+            justify-content: space-around;
+            margin-top: $marginTop;
+            >img{
+                margin-top: 3.5em;
+            }
+            >#circle4,
+            #circle5 {
+                background: black;
+            }
+        }
+    
+        >#seven {
+            display: flex;
+            justify-content: space-around;
+            margin-top: $marginTop;
+            >img{
+                margin-top: 3.5em;
+            }
+            >#circle1,
+            #circle2 {
+                background: black;
+            }
+        }
+    
+        >#eight {
+            display: flex;
+            justify-content: space-around;
+            margin-top: $marginTop;
+            >img{
+                margin-top: 3.5em;
+            }
+            >#circle5,
+            #circle4,
+            #circle3,
+            #circle2 {
+                background: black;
+            }
+        }
+    
+        >#nine {
+            display: flex;
+            justify-content: space-around;
+            margin-top: $marginTop;
+            >img{
+                margin-top: 3.5em;
+            }
+            >#circle1,
+            #circle2,
+            #circle3,
+            #circle4 {
+                background: black;
+            }
+        }
+    
+        >#ten {
+            display: flex;
+            justify-content: space-around;
+            margin-top: $marginTop;
+            >img{
+                margin-top: 3.5em;
+            }
+            >#circle5,
+            #circle4,
+            #circle3 {
+                background: black;
+            }
+        }
+    
+        >#eleven {
+            display: flex;
+            justify-content: space-around;
+            margin-top: $marginTop;
+            >img{
+                margin-top: 3.5em;
+            }
+            >#circle1,
+            #circle2,
+            #circle3 {
+                background: black;
+            }
+        }
+
+
+        .circle {
+            background: $circleFadeBg;
+            width: 30px;
+            height: 30px;
+            margin-top: 3.5em;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+    }
+    div{
+        >img{
+            width: 10%;
+            height: 10%;
+        }
+    }
+
+    #particles-js {
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}

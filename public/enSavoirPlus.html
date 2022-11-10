@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="assets/enSavoirPlus.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/enSavoirPlus.css">
   <link rel="stylesheet" type="text/css" href="assets/js/animate.css/animate.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -33,25 +33,25 @@
         </article>
       </header>
       <!-- skills articles -->
-      <article id="skills">
+      <article id="skills" style="overflow-x: hidden;">
         <h2>Mes Compétence</h2>
         <nav>
           <p>cliquez ici ! :</p>
           <a href="#langue">
-            <h2>languages</h2>
+            <button>languages</button>
           </a>
           <a href="#frame">
-            <h2>frameworks</h2>
+            <button>frameworks</button>
           </a>
           <a href="#supInfo">
-            <h2>information supplémentaire</h2>
+            <button>information supplémentaire</button>
           </a>
           <a href="index.html">
-            <h2>Menu principale</h2>
+            <button>Menu principale</button>
           </a>
         </nav>
         <h2 id="langue">mes languages</h2>
-        <div id="first" data-aos="fade-left" data-aos-duration="1500">
+        <div class="fade" id="first" data-aos="fade-left" data-aos-duration="1500">
           <img src="assets/images/html-5.png" alt="html5">
           <p>===</p>
           <div class="circle" id="circle1"></div>
@@ -61,7 +61,7 @@
           <div class="circle" id="circle5"></div>
         </div>
 
-        <div id="second" data-aos="fade-right" data-aos-duration="1500">
+        <div class="fade" id="second" data-aos="fade-right" data-aos-duration="1500">
           <div class="circle" id="circle1"></div>
           <div class="circle" id="circle2"></div>
           <div class="circle" id="circle3"></div>
@@ -71,7 +71,7 @@
           <img src="assets/images/css-3.png" alt="css3">
         </div>
 
-        <div id="third" data-aos="fade-left" data-aos-duration="1500">
+        <div class="fade" id="third" data-aos="fade-left" data-aos-duration="1500">
           <img src="assets/images/python.png" alt="python">
           <p>===</p>
           <div class="circle" id="circle1"></div>
@@ -81,7 +81,7 @@
           <div class="circle" id="circle5"></div>
         </div>
 
-        <div id="fourth" data-aos="fade-right" data-aos-duration="1500">
+        <div class="fade" id="fourth" data-aos="fade-right" data-aos-duration="1500">
           <div class="circle" id="circle1"></div>
           <div class="circle" id="circle2"></div>
           <div class="circle" id="circle3"></div>
@@ -91,7 +91,7 @@
           <img src="assets/images/js.png" alt="java script">
         </div>
 
-        <div id="five" data-aos="fade-left" data-aos-duration="1500">
+        <div class="fade" id="five" data-aos="fade-left" data-aos-duration="1500">
           <img src="assets/images/c-sharp.png" alt="c#">
           <p>===</p>
           <div class="circle" id="circle1"></div>
@@ -101,7 +101,7 @@
           <div class="circle" id="circle5"></div>
         </div>
 
-        <div id="six" data-aos="fade-right" data-aos-duration="1500">
+        <div class="fade" id="six" data-aos="fade-right" data-aos-duration="1500">
           <div class="circle" id="circle1"></div>
           <div class="circle" id="circle2"></div>
           <div class="circle" id="circle3"></div>
@@ -111,7 +111,7 @@
           <img src="assets/images/php.png" alt="php">
         </div>
 
-        <div id="seven" data-aos="fade-left" data-aos-duration="1500">
+        <div class="fade" id="seven" data-aos="fade-left" data-aos-duration="1500">
           <img src="assets/images/database.png" alt="sql">
           <p>===</p>
           <div class="circle" id="circle1"></div>
@@ -123,7 +123,7 @@
 
         <h2 id="frame">frameworks</h2>
 
-        <div id="eight" data-aos="fade-right" data-aos-duration="1500">
+        <div class="fade" id="eight" data-aos="fade-right" data-aos-duration="1500">
           <div class="circle" id="circle1"></div>
           <div class="circle" id="circle2"></div>
           <div class="circle" id="circle3"></div>
@@ -132,7 +132,7 @@
           <p>===</p>
           <img src="assets/images/sass.png" alt="scss/sass">
         </div>
-        <div id="nine" data-aos="fade-left" data-aos-duration="1500">
+        <div class="fade" id="nine" data-aos="fade-left" data-aos-duration="1500">
           <img src="assets/images/bootstrap.png" alt="bootstrap">
           <p>===</p>
           <div class="circle" id="circle1"></div>
@@ -142,7 +142,7 @@
           <div class="circle" id="circle5"></div>
         </div>
 
-        <div id="ten" data-aos="fade-right" data-aos-duration="1500">
+        <div class="fade" id="ten" data-aos="fade-right" data-aos-duration="1500">
           <div class="circle" id="circle1"></div>
           <div class="circle" id="circle2"></div>
           <div class="circle" id="circle3"></div>
@@ -152,7 +152,7 @@
           <img src="assets/images/nodejs.png" alt="nodejs">
         </div>
 
-        <div id="eleven" data-aos="fade-left" data-aos-duration="1500">
+        <div class="fade" id="eleven" data-aos="fade-left" data-aos-duration="1500">
           <img src="assets/images/git.png" alt="git">
           <p>===</p>
           <div class="circle" id="circle1"></div>
@@ -164,8 +164,8 @@
 
         <h2 id="supInfo">information supplémentaire</h2>
         <p>
-          tout les language montrer ci dessus sont en cours d'apprentissage, et puis j'aimerais personnellement beaucoup
-          les maitriser parfaitement le monde de l'informatique est un monde qui me pationne a l'impatience de pouvoir vous contacter.
+          tout les language montrer ci dessus sont en cours d'apprentissage, et puis j'aimerais personnellement, beaucoup
+          les maitriser parfaitement. Le monde de l'informatique est un monde qui me pationne.
         </p>
       </article>
     </section>
