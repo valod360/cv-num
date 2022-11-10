@@ -1,6 +1,10 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 #container {
   z-index: 5;
-  background-color: rgb(52, 58, 64);
+  background-color: #1e1e1e;
   grid-column: 2/3;
   grid-row: 1/4;
   color: rgb(173, 181, 189);
@@ -27,14 +31,13 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid black;
 }
 #skills > nav > a > button {
+  font-size: 34px;
   text-decoration: none;
   color: rgb(173, 181, 189);
   background-color: rgb(73, 80, 87);
   cursor: pointer;
-  height: 3em;
   border-radius: 20px;
 }
 #skills > nav > a > button:active {
@@ -169,6 +172,7 @@
 }
 #skills > h2,
 #skills h3 {
+  font-size: 60px;
   text-align: center;
 }
 

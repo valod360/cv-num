@@ -1,12 +1,16 @@
+
 // variable pour les skills
-$MainBg: rgb(52, 58, 64);
+$MainBg: #1e1e1e;
 $TextBg: rgb(173, 181, 189);
 $circleFadeBg: rgb(39, 43, 48);
 $buttonBg: rgb(73, 80, 87);
 $marginTop: 20vh;
 
-
 //pour la page en elle meme
+body {
+font-family:"Roboto", sans-serif;
+
+}
 #container {
     z-index: 5;
     background-color: $MainBg;
@@ -39,14 +43,14 @@ $marginTop: 20vh;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        border: 1px solid black;
+
 
         >a>button {
+            font-size: 34px;
             text-decoration: none;
             color: $TextBg;
             background-color: $buttonBg;
             cursor: pointer;
-            height: 3em;
             border-radius: 20px;
 
             &:active {
@@ -209,6 +213,7 @@ $marginTop: 20vh;
 
     >h2,
     h3 {
+        font-size: 60px;
         text-align: center;
     }
 
