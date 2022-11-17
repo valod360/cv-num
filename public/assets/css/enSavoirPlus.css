@@ -371,7 +371,7 @@ body {
   #particles-js {
     z-index: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 70% 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }
 }/*# sourceMappingURL=enSavoirPlus.css.map */

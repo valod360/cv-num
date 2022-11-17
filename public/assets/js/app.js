@@ -1,6 +1,10 @@
 
 /* Otherwise just put the config content (json): */
 
+var test = document.onclick("p", function(){
+  alert("test")
+});
+
 particlesJS("particles-js", {
   "particles": {
     "number": {
@@ -132,3 +136,19 @@ update = function() {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
