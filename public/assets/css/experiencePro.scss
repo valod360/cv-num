@@ -1,0 +1,147 @@
+// variable principale
+$MainBg: #1e1e1e;
+$TextBg: rgb(173, 181, 189);
+$circleFadeBg: rgb(39, 43, 48);
+$buttonBg: rgb(73, 80, 87);
+$marginTop: 20vh;
+$fontSize: 2em;
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+#container {
+    z-index: 5;
+    background-color: $MainBg;
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    color: $TextBg;
+    font-size: $fontSize;
+
+    >#title {
+        display: flex;
+        height: 15rem;
+        padding: 5px 5px 0 5px;
+
+        >section {
+            >button {
+                font-size: 34px;
+                text-decoration: none;
+                color: $TextBg;
+                background-color: $buttonBg;
+                cursor: pointer;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+#containerCard2{
+    margin-bottom: 4%;
+}
+
+.containerCard {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+
+    >.card {
+        border: 1px solid black;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        background-color: $buttonBg;
+        height: 30rem;
+        width: 30rem;
+        >h2{
+            text-align: center;
+        }
+    }
+}
+
+#particles-js {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background: black;
+}
+
+.particles-js-canvas-el {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+}
+
+@media screen and (max-width: 1200px) {
+    .containerCard{
+        margin-top: 0;
+    }
+    #container {
+        z-index: 5;
+        background-color: $MainBg;
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+        color: $TextBg;
+        font-size: $fontSize;
+
+        >#title {
+            display: flex;
+            flex-direction: column;
+            height: 15rem;
+            padding: 5px 5px 0 5px;
+            >img{
+                width: 50%;
+                align-self: center;
+                margin-top: 5%;
+            }
+        }
+
+        #particles-js {
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 60% 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            background: black;
+        }
+
+        .containerCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            >.card {
+                border: 1px solid black;
+                margin-left: 5rem;
+                margin-right: 5rem;
+                background-color: $buttonBg;
+                height: 23rem;
+                width: 25rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #particles-js {
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 70% 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        background: black;
+        height: 100%;
+    }
+    #container{
+        .containerCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+    
+            >.card {
+                background-color: $buttonBg;
+                height: 100%;
+                margin: 0;
+                width: 100%;
+                margin-top: 15rem;
+            }
+        } 
+    }
+}

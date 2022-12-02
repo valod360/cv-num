@@ -1,0 +1,164 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  overflow: hidden;
+}
+main > #flammeVaisseau {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+}
+main > #vaisseau {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main > #mainSection {
+  color: rgb(213, 160, 160);
+  text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("../images/fond-espace.png");
+}
+main > #seconSection {
+  color: rgb(213, 160, 160);
+  text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("../images/fond-espace.png");
+}
+main > #seconSection > img {
+  width: 50%;
+}
+
+.rotate1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(3deg) translate(0px, 10px);
+}
+
+.rotate1Flame {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%) rotate(3deg) translate(0px, 10px);
+}
+
+.rotate2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(6deg) translate(0px, 100px);
+}
+
+.rotate2Flame {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%) rotate(6deg) translate(0px, 100px);
+}
+
+.rotate3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 200px);
+}
+
+.rotate3Flame {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 200px);
+}
+
+.rotate4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 300px);
+}
+
+.rotate4Flame {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 300px);
+}
+
+.rotate5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 350px);
+}
+
+.rotate5Flame {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 350px);
+}
+
+.rotate6 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(5deg) translate(0px, 350px);
+}
+
+.rotate6Flame {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%) rotate(5deg) translate(0px, 350px);
+}
+
+.rotate7 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg) translate(0px, 350px);
+}
+
+.rotate7Flame {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%) rotate(0deg) translate(0px, 350px);
+}
+
+.backToMenu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  color: #000;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: arial;
+  text-decoration: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 0 100px -20px, rgba(0, 0, 0, 0.3) 0 0 60px -15px;
+}
+
+.backToMenu:hover {
+  background: #d5d5d5;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 0 100px -20px, rgba(0, 0, 0, 0.3) 0 0 60px 0px;
+}
+
+iframe[sandbox] .backToMenu {
+  display: none;
+}/*# sourceMappingURL=portfolio.css.map */
