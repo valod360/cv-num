@@ -18,11 +18,22 @@ main > #flammeVaisseau {
   left: 46%;
   transform: translate(-50%, -50%);
 }
+main > .flammeVaisseauPad {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 46%;
+}
 main > #vaisseau {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+main > .vaisseauPad {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 main > #mainSection {
   color: rgb(213, 160, 160);

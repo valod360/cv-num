@@ -3,7 +3,7 @@ let flame = document.getElementById('flammeVaisseau')
 let vaisseau = document.getElementById('vaisseau')
 let timer = null;
 let animationMoment = 0;
-let padAnim = 0;
+let padAnim = false;
 
 /* recuperer le deltay et lui attribuer une valeur puis la retirer si il scroll en negatif une fois fait
 faire les animation selon la position du scroll */
@@ -19,26 +19,51 @@ scrollContainer.addEventListener('wheel', (evt) => {
 
 
     scrollContainer.scrollLeft += evt.deltaY
+
+
+
+
+
+    console.log(padAnim);
+
+
+
     if (evt.deltaY == 100) {
         ++animationMoment;
+        padAnim = false
     } if (evt.deltaY == -100) {
         --animationMoment;
+        padAnim = false;
     } if (animationMoment <= 0) {
         animationMoment = 0;
-    }
-    
-    
-    //cette partie a finir
-    
-    if(evt.deltaY < -100){
-        padAnim = 'dans le negatif';
-    }if(evt.deltaY > 100){
-        padAnim = 'dans le positif';
-    }
-     else if (animationMoment >= 20) {
+    } else if (animationMoment >= 20) {
         animationMoment = 20;
     }
-    console.log(padAnim);
+    console.log(animationMoment)
+
+
+    //cette partie a finir
+
+    if (evt.deltaY < 0 && evt.deltaY != -100) {
+        padAnim = true
+    } else if (evt.deltaY > 0 && evt.deltaY != 100) {
+        padAnim = true
+    } else if (evt.deltaY == 0) {
+        padAnim = false
+    }
+
+    // for the computer pad
+    if (padAnim == true) {
+        vaisseau.removeAttribute('id');
+        vaisseau.classList.add('vaisseauPad');
+        flame.removeAttribute('id');
+        flame.classList.add('flammeVaisseauPad');
+    } if (padAnim == false) {
+        vaisseau.classList.remove('vaisseauPad');
+        vaisseau.setAttribute('id', 'vaisseau');
+        flame.classList.remove('flammeVaisseauPad');
+        flame.setAttribute('id', 'flammeVaisseau');
+    }
 
 
 
@@ -47,13 +72,6 @@ scrollContainer.addEventListener('wheel', (evt) => {
 
     flame.style.display = 'block';
     vaisseau.style.display = 'none';
-
-
-
-
-
-
-
 
 
     // frame 1
@@ -88,7 +106,7 @@ scrollContainer.addEventListener('wheel', (evt) => {
     }
 
     //frame 3
-    if(animationMoment == 10){
+    if (animationMoment == 10) {
         vaisseau.classList.remove('rotate2');
         vaisseau.classList.add('rotate3');
         //flame rotate
@@ -103,7 +121,7 @@ scrollContainer.addEventListener('wheel', (evt) => {
     }
 
     //frame 4
-    if(animationMoment == 11){
+    if (animationMoment == 11) {
         vaisseau.classList.remove('rotate3');
         vaisseau.classList.add('rotate4');
         //flame rotate
@@ -118,7 +136,7 @@ scrollContainer.addEventListener('wheel', (evt) => {
     }
 
     //frame5
-    if(animationMoment == 12){
+    if (animationMoment == 12) {
         vaisseau.classList.remove('rotate4');
         vaisseau.classList.add('rotate5');
         //flame rotate
@@ -133,7 +151,7 @@ scrollContainer.addEventListener('wheel', (evt) => {
     }
 
     //frame6
-    if(animationMoment == 13){
+    if (animationMoment == 13) {
         vaisseau.classList.remove('rotate5');
         vaisseau.classList.add('rotate6');
         //flame rotate
@@ -148,7 +166,7 @@ scrollContainer.addEventListener('wheel', (evt) => {
     }
 
     //frame 7
-    if(animationMoment == 14){
+    if (animationMoment == 14) {
         vaisseau.classList.remove('rotate6');
         vaisseau.classList.add('rotate7');
         //flame rotate
