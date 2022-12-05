@@ -13,14 +13,16 @@ main {
 }
 main > #flammeVaisseau {
   position: absolute;
-  display: none;
+  display: block;
+  visibility: hidden;
   top: 50%;
   left: 46%;
   transform: translate(-50%, -50%);
 }
 main > .flammeVaisseauPad {
   position: absolute;
-  display: none;
+  display: block;
+  visibility: hidden;
   top: 50%;
   left: 46%;
 }
@@ -54,101 +56,59 @@ main > #seconSection > img {
 }
 
 .rotate1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(3deg) translate(0px, 10px);
+  transform: translate(-50%, -50%) rotate(3deg) translate(0px, 10px) !important;
 }
 
 .rotate1Flame {
-  position: absolute;
-  top: 50%;
-  left: 46%;
-  transform: translate(-50%, -50%) rotate(3deg) translate(0px, 10px);
+  transform: translate(-50%, -50%) rotate(3deg) translate(0px, 10px) !important;
 }
 
 .rotate2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(6deg) translate(0px, 100px);
+  transform: translate(-50%, -50%) rotate(6deg) translate(0px, 100px) !important;
 }
 
 .rotate2Flame {
-  position: absolute;
-  top: 50%;
-  left: 46%;
-  transform: translate(-50%, -50%) rotate(6deg) translate(0px, 100px);
+  transform: translate(-50%, -50%) rotate(6deg) translate(0px, 100px) !important;
 }
 
 .rotate3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 200px);
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 200px) !important;
 }
 
 .rotate3Flame {
-  position: absolute;
-  top: 50%;
-  left: 46%;
-  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 200px);
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 200px) !important;
 }
 
 .rotate4 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 300px);
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 300px) !important;
 }
 
 .rotate4Flame {
-  position: absolute;
-  top: 50%;
-  left: 46%;
-  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 300px);
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 300px) !important;
 }
 
 .rotate5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 350px);
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 350px) !important;
 }
 
 .rotate5Flame {
-  position: absolute;
-  top: 50%;
-  left: 46%;
-  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 350px);
+  transform: translate(-50%, -50%) rotate(10deg) translate(0px, 350px) !important;
 }
 
 .rotate6 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(5deg) translate(0px, 350px);
+  transform: translate(-50%, -50%) rotate(5deg) translate(0px, 350px) !important;
 }
 
 .rotate6Flame {
-  position: absolute;
-  top: 50%;
-  left: 46%;
-  transform: translate(-50%, -50%) rotate(5deg) translate(0px, 350px);
+  transform: translate(-50%, -50%) rotate(5deg) translate(0px, 350px) !important;
 }
 
 .rotate7 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg) translate(0px, 350px);
+  transform: translate(-50%, -50%) rotate(0deg) translate(0px, 350px) !important;
 }
 
 .rotate7Flame {
-  position: absolute;
-  top: 50%;
-  left: 46%;
-  transform: translate(-50%, -50%) rotate(0deg) translate(0px, 350px);
+  transform: translate(-50%, -50%) rotate(0deg) translate(0px, 350px) !important;
 }
 
 .backToMenu {

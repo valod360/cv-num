@@ -13,14 +13,14 @@ main {
 
     >#flammeVaisseau {
         position: absolute;
-        display: none;
+        display: block;
         top: 50%;
         left: 46%;
         transform: translate(-50%, -50%);
     }
     >.flammeVaisseauPad {
         position: absolute;
-        display: none;
+        display: block;
         top: 50%;
         left: 46%;
     }

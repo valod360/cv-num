@@ -2,189 +2,190 @@ const scrollContainer = document.querySelector('main');
 let flame = document.getElementById('flammeVaisseau')
 let vaisseau = document.getElementById('vaisseau')
 let timer = null;
-let animationMoment = 0;
-let padAnim = false;
 
-/* recuperer le deltay et lui attribuer une valeur puis la retirer si il scroll en negatif une fois fait
-faire les animation selon la position du scroll */
+/**
+ * Etape actuelle.
+ */
+let step = 0;
+/**
+ * Maximum du scroll
+ */
+const MAX_STEP = 14;
+/**
+ * Minimum du scroll
+ */
+const MIN_STEP = 0;
 
-/* faire une function qui triger avant qu'il arrive sur la div suivante*/
+/**
+ * Un tableau qui permet de stocker
+ * pour chaque etape, les class pour la flame et le vaisseau
+ * Pour ajouter une etape, il suffit d' ajouter un objet dans le tableau
+ * au bon endroit (l'ordre compte).
+ */
+const classListByStep = [{
+    vaisseau: ['rotate1'],
+    flame: ['rotate1Flame']
+}, {
+    vaisseau: ['rotate2'],
+    flame: ['rotate2Flame']
+}, {
+    vaisseau: ['rotate3'],
+    flame: ['rotate3Flame']
+}, {
+    vaisseau: ['rotate4'],
+    flame: ['rotate4Flame']
+}, {
+    vaisseau: ['rotate5'],
+    flame: ['rotate5Flame']
+}, {
+    vaisseau: ['rotate6'],
+    flame: ['rotate6Flame']
+}, {
+    vaisseau: ['rotate7'],
+    flame: ['rotate7Flame']
+}];
 
-/* commencer par faire une variable pour le pad ensuite faire en sorte que quand c'est trop ou pas assez
-je le met comme un scroll de souris normal puis j'ajoute cette valeur de base*/
 
+/**
+ * Pour eviter d'ecrire 850 fois les meme lignes de code
+ * On a fait un tableau, qui va contenir dans l'ordre
+ * toutes les class par etapes. Cette methode permet d'aller appliquer 
+ * les bonnes class a chaque etape.
+ * @param {number} classListNumber L'emplacement dans le tableau
+ */
+ const setClassList = (classListNumber) => {
+    vaisseau.classList = [...classListByStep[classListNumber].vaisseau];
+    flame.classList = [...classListByStep[classListNumber].flame];
+}
+
+/**
+ * Permet juste de supprimer toutes les class
+ * dans le cas ou on est la premiere etape.
+ */
+const removeClassList = () => {
+    vaisseau.classList = [];
+    flame.classList = [];
+}
+
+
+/**
+ * La methode permet de gerer les class a utiliser sur notre vaisseau.
+ * Les cases represente les etapes de scroll.
+ * A chaque etape on regarde la direction (Ton soucis ete ici).
+ * Si on avance, on va chercher les class qui correspond grace a la methodes setClassList
+ * Si on recule, si on est a la premiere etapes (la 7) on supprime les class pour reafficher a letat initial
+ * Mais si on peut encore reculer, on va chercher les class de l'etape precedente.
+ * @param {number} step L'etape ou l'on se trouve.
+ * @param {boolean} isRight La direction
+ */
+ const applyStep = (step, isRight) => {
+    switch (step) {
+        case 7: {
+            if (isRight) {
+                setClassList(0);
+            } else {
+                removeClassList();
+            }
+            break;
+        }
+        case 8: {
+            if (isRight) {
+                setClassList(1);
+            } else {
+                setClassList(0);
+            }
+            break;
+        }
+        case 9: {
+            if (isRight) {
+                setClassList(2);
+            } else {
+                setClassList(1);
+            }
+            break;
+        }
+        case 10: {
+            if (isRight) {
+                setClassList(3);
+            } else {
+                setClassList(2);
+            }
+            break;
+        }
+        case 11: {
+            if (isRight) {
+                setClassList(4);
+            } else {
+                setClassList(3);
+            }
+            break;
+        }
+        case 12: {
+            if (isRight) {
+                setClassList(5);
+            } else {
+                setClassList(4);
+            }
+            break;
+        }
+        case 13: {
+            if (isRight) {
+                setClassList(6);
+            } else {
+                setClassList(5);
+            }
+            break;
+        }
+        case 14: {
+            if (isRight) {
+                setClassList(7);
+            } else {
+                setClassList(6);
+            }
+            break;
+        }
+    }
+}
+
+/**
+ * Dans un premier temps on affiche le vaisseau avec la flamme.
+ * Ensuite on augmente et on diminue le step sans depasser le min et le max definit plus haut.
+ * Et on transmet les infos a notre methodes qui va appliquer les regles css selon la situation.
+ * @param {boolean} isRight Permet de savoir si on va vers la droite ou vers la gauche.
+ */
+const moveShip = (isRight) => {
+    flame.style.visibility = 'visible';
+    vaisseau.style.visibility = 'hidden';
+
+    if (isRight) {
+        step = step === MAX_STEP ? MAX_STEP : step + 1;
+    } else {
+        step = step === MIN_STEP ? MIN_STEP : step - 1;
+    }
+
+    applyStep(step, isRight);
+}
+
+/**
+ * On ecoute le scroll.
+ * On applique le scroll horizontalement
+ * On definit le sens de navigation : vers la droite ou vers l'avant
+ * On anime le vaisseau.
+ * 
+ * ATTENTION A FAIRE DES METHODES LES MOINS GROSSES POSSIBLE
+ * CHAQUE METHODE A SON ROLE.
+ * 
+ * L'ecoute de l'event ne va faire que transmettre l'information de scroll a notre
+ * methode d'animation du vaisseau.
+ */
 scrollContainer.addEventListener('wheel', (evt) => {
-
     evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
 
+    const isRight = evt.deltaY > 0;
 
-    scrollContainer.scrollLeft += evt.deltaY
-
-
-
-
-
-    console.log(padAnim);
-
-
-
-    if (evt.deltaY == 100) {
-        ++animationMoment;
-        padAnim = false
-    } if (evt.deltaY == -100) {
-        --animationMoment;
-        padAnim = false;
-    } if (animationMoment <= 0) {
-        animationMoment = 0;
-    } else if (animationMoment >= 20) {
-        animationMoment = 20;
-    }
-    console.log(animationMoment)
-
-
-    //cette partie a finir
-
-    if (evt.deltaY < 0 && evt.deltaY != -100) {
-        padAnim = true
-    } else if (evt.deltaY > 0 && evt.deltaY != 100) {
-        padAnim = true
-    } else if (evt.deltaY == 0) {
-        padAnim = false
-    }
-
-    // for the computer pad
-    if (padAnim == true) {
-        vaisseau.removeAttribute('id');
-        vaisseau.classList.add('vaisseauPad');
-        flame.removeAttribute('id');
-        flame.classList.add('flammeVaisseauPad');
-    } if (padAnim == false) {
-        vaisseau.classList.remove('vaisseauPad');
-        vaisseau.setAttribute('id', 'vaisseau');
-        flame.classList.remove('flammeVaisseauPad');
-        flame.setAttribute('id', 'flammeVaisseau');
-    }
-
-
-
-
-
-
-    flame.style.display = 'block';
-    vaisseau.style.display = 'none';
-
-
-    // frame 1
-    //if is to SET the animation and the else to REMOVE it
-    if (animationMoment == 8) {
-        vaisseau.removeAttribute('id');
-        vaisseau.classList.add('rotate1');
-        //flame rotate
-        flame.removeAttribute('id');
-        flame.classList.add('rotate1Flame');
-    } else if (animationMoment == 7) {
-        vaisseau.classList.remove('rotate1');
-        vaisseau.setAttribute('id', 'vaisseau')
-        //flame rotate
-        flame.classList.remove('rotate1Flame');
-        flame.setAttribute('id', 'flammeVaisseau')
-    }
-
-    // frame 2
-    if (animationMoment == 9) {
-        vaisseau.classList.remove('rotate1');
-        vaisseau.classList.add('rotate2');
-        //flame rotate
-        flame.classList.remove('rotate1Flame');
-        flame.classList.add('rotate2Flame');
-    } else if (animationMoment == 8) {
-        vaisseau.classList.add('rotate1');
-        vaisseau.classList.remove('rotate2');
-        //flame rotate
-        flame.classList.add('rotate1Flame');
-        flame.classList.remove('rotate2Flame');
-    }
-
-    //frame 3
-    if (animationMoment == 10) {
-        vaisseau.classList.remove('rotate2');
-        vaisseau.classList.add('rotate3');
-        //flame rotate
-        flame.classList.remove('rotate2Flame');
-        flame.classList.add('rotate3Flame');
-    } else if (animationMoment == 9) {
-        vaisseau.classList.add('rotate2');
-        vaisseau.classList.remove('rotate3');
-        //flame rotate
-        flame.classList.add('rotate2Flame');
-        flame.classList.remove('rotate3Flame');
-    }
-
-    //frame 4
-    if (animationMoment == 11) {
-        vaisseau.classList.remove('rotate3');
-        vaisseau.classList.add('rotate4');
-        //flame rotate
-        flame.classList.remove('rotate3Flame');
-        flame.classList.add('rotate4Flame');
-    } else if (animationMoment == 10) {
-        vaisseau.classList.add('rotate3');
-        vaisseau.classList.remove('rotate4');
-        //flame rotate
-        flame.classList.add('rotate3Flame');
-        flame.classList.remove('rotate4Flame');
-    }
-
-    //frame5
-    if (animationMoment == 12) {
-        vaisseau.classList.remove('rotate4');
-        vaisseau.classList.add('rotate5');
-        //flame rotate
-        flame.classList.remove('rotate4Flame');
-        flame.classList.add('rotate5Flame');
-    } else if (animationMoment == 11) {
-        vaisseau.classList.add('rotate4');
-        vaisseau.classList.remove('rotate5');
-        //flame rotate
-        flame.classList.add('rotate4Flame');
-        flame.classList.remove('rotate5Flame');
-    }
-
-    //frame6
-    if (animationMoment == 13) {
-        vaisseau.classList.remove('rotate5');
-        vaisseau.classList.add('rotate6');
-        //flame rotate
-        flame.classList.remove('rotate5Flame');
-        flame.classList.add('rotate6Flame');
-    } else if (animationMoment == 12) {
-        vaisseau.classList.add('rotate5');
-        vaisseau.classList.remove('rotate6');
-        //flame rotate
-        flame.classList.add('rotate5Flame');
-        flame.classList.remove('rotate6Flame');
-    }
-
-    //frame 7
-    if (animationMoment == 14) {
-        vaisseau.classList.remove('rotate6');
-        vaisseau.classList.add('rotate7');
-        //flame rotate
-        flame.classList.remove('rotate6Flame');
-        flame.classList.add('rotate7Flame');
-    } else if (animationMoment == 13) {
-        vaisseau.classList.add('rotate6');
-        vaisseau.classList.remove('rotate7');
-        //flame rotate
-        flame.classList.add('rotate6Flame');
-        flame.classList.remove('rotate7Flame');
-    }
-
+    moveShip(isRight);
 });
-
-
-
-
 
 const onScrollStop = callback => {
     let isScrolling;
@@ -199,6 +200,6 @@ const onScrollStop = callback => {
 };
 
 onScrollStop(() => {
-    flame.style.display = 'none';
-    vaisseau.style.display = 'block';
+    flame.style.visibility = 'hidden';
+    vaisseau.style.visibility = 'visible';
 });
