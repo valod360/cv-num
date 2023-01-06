@@ -7,10 +7,11 @@ body {
   overflow: hidden;
 }
 
-main {
+#animation {
   display: flex;
   overflow: hidden;
 }
+
 main > #flammeVaisseau {
   position: absolute;
   display: block;
@@ -19,6 +20,7 @@ main > #flammeVaisseau {
   left: 46%;
   transform: translate(-50%, -50%);
 }
+
 main > .flammeVaisseauPad {
   position: absolute;
   display: block;
@@ -26,17 +28,20 @@ main > .flammeVaisseauPad {
   top: 50%;
   left: 46%;
 }
+
 main > #vaisseau {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 main > .vaisseauPad {
   position: absolute;
   top: 50%;
   left: 50%;
 }
+
 main > #mainSection {
   color: rgb(213, 160, 160);
   text-align: center;
@@ -44,6 +49,7 @@ main > #mainSection {
   min-height: 100vh;
   background: url("../images/fond-espace.png");
 }
+
 main > #seconSection {
   color: rgb(213, 160, 160);
   text-align: center;
@@ -51,7 +57,49 @@ main > #seconSection {
   min-height: 100vh;
   background: url("../images/fond-espace.png");
 }
+
 main > #seconSection > img {
+  width: 50%;
+}
+
+main > #thirdSection {
+  color: rgb(213, 160, 160);
+  text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("../images/fond-espace.png");
+}
+main > #thirdSection > img {
+  width: 50%;
+}
+main #fourthSection {
+  color: rgb(213, 160, 160);
+  text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("../images/fond-espace.png");
+}
+main #fourthSection > img {
+  width: 50%;
+}
+main #fifthSection {
+  color: rgb(213, 160, 160);
+  text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("../images/fond-espace.png");
+}
+main #fifthSection > img {
+  width: 50%;
+}
+main #sixthSection {
+  color: rgb(213, 160, 160);
+  text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("../images/fond-espace.png");
+}
+main #sixthSection > img {
   width: 50%;
 }
 

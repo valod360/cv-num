@@ -10,7 +10,7 @@ let step = 0;
 /**
  * Maximum du scroll
  */
-const MAX_STEP = 14;
+const MAX_STEP = 20;
 /**
  * Minimum du scroll
  */
@@ -133,14 +133,6 @@ const removeClassList = () => {
                 setClassList(6);
             } else {
                 setClassList(5);
-            }
-            break;
-        }
-        case 14: {
-            if (isRight) {
-                setClassList(7);
-            } else {
-                setClassList(6);
             }
             break;
         }
